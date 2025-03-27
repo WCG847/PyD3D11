@@ -10,3 +10,15 @@ class IUnknownVtbl(Structure):
         ("AddRef", WINFUNCTYPE(c_ulong, c_void_p)),
         ("Release", WINFUNCTYPE(c_ulong, c_void_p)),
     ]
+
+class IUnknown(Structure):
+    _fields_ = [("lpVtbl", POINTER(IUnknownVtbl))]
+
+    def QueryInterface(self, riid, ppvObject):
+        return self.lpVtbl.contents.QueryInterface(self, riid, ppvObject)
+
+    def AddRef(self):
+        return self.lpVtbl.contents.AddRef(self)
+
+    def Release(self):
+        return self.lpVtbl.contents.Release(self)

@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e4cf2781-41d0-41d0-ac7c-395867f53213</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>IDL\D3D11_constants.py</StartupFile>
+    <StartupFile>src\IDL\D3D11_constants.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,22 +21,26 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="IDL\Clear.py" />
-    <Compile Include="IDL\COM\Common.py" />
-    <Compile Include="IDL\COM\DeviceChild.py" />
-    <Compile Include="IDL\COM\GUID.py" />
-    <Compile Include="IDL\CPU.py" />
-    <Compile Include="IDL\DepthStencils.py" />
-    <Compile Include="IDL\Draw.py" />
-    <Compile Include="IDL\Input.py" />
-    <Compile Include="IDL\D3D11_constants.py" />
-    <Compile Include="IDL\Map.py" />
-    <Compile Include="IDL\Raise.py" />
-    <Compile Include="IDL\Resources.py" />
+    <Compile Include="src\IDL\Clear.py" />
+    <Compile Include="src\IDL\COM\Common.py" />
+    <Compile Include="src\IDL\COM\DeviceChild.py" />
+    <Compile Include="src\IDL\COM\GUID.py" />
+    <Compile Include="src\IDL\CPU.py" />
+    <Compile Include="src\IDL\DepthStencils.py" />
+    <Compile Include="src\IDL\Draw.py" />
+    <Compile Include="src\IDL\Input.py" />
+    <Compile Include="src\IDL\D3D11_constants.py" />
+    <Compile Include="src\IDL\Map.py" />
+    <Compile Include="src\IDL\Raise.py" />
+    <Compile Include="src\IDL\Resources.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="IDL\" />
-    <Folder Include="IDL\COM\" />
+    <Folder Include="src\IDL\" />
+    <Folder Include="src\IDL\COM\" />
+    <Folder Include="src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
