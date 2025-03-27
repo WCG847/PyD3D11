@@ -1,0 +1,130 @@
+from ctypes import Structure, c_char_p, c_uint, c_byte, c_float, c_int
+from enum import IntEnum, IntFlag
+
+class D3D11_FILL_MODE(IntEnum):
+	D3D11_FILL_WIREFRAME = 2
+	D3D11_FILL_SOLID = 3
+
+class D3D11_CULL_MODE(IntEnum):
+	D3D11_CULL_NONE = 1
+	D3D11_CULL_FRONT = 2
+	D3D11_CULL_BACK = 3
+
+class D3D11_SO_DECLARATION_ENTRY(Structure):
+	_fields_ = [
+		("Stream", c_uint),
+		("SemanticName", c_char_p), 
+		("SemanticIndex", c_uint), 
+		("StartComponent", c_byte),
+		("ComponentCount", c_byte),
+		("OutputSlot", c_byte),
+	]
+
+class D3D11_VIEWPORT(Structure):
+	_fields_ = [
+		("TopLeftX", c_float),
+		("TopLeftY", c_float),
+		("Width", c_float),
+		("Height", c_float),
+		("MinDepth", c_float),
+		("MaxDepth", c_float),
+	]
+
+class D3D11_DRAW_INSTANCED_INDIRECT_ARGS(Structure):
+	_fields_ = [
+		("VertexCountPerInstance", c_uint),
+		("InstanceCount", c_uint),
+		("StartVertexLocation", c_uint),
+		("StartInstanceLocation", c_uint),
+	]
+
+class D3D11_DRAW_INDEXED_INSTANCED_INDIRECT_ARGS (Structure):
+	_fields_ = [
+		("IndexCountPerInstance", c_uint),
+		("InstanceCount", c_uint),
+		("StartIndexLocation", c_uint),
+		("BaseVertexLocation", c_int),
+		("StartInstanceLocation", c_uint),
+	]
+
+class D3D11_RESOURCE_DIMENSION (IntEnum):
+	D3D11_RESOURCE_DIMENSION_UNKNOWN = 0
+	D3D11_RESOURCE_DIMENSION_BUFFER = 1
+	D3D11_RESOURCE_DIMENSION_TEXTURE1D = 2
+	D3D11_RESOURCE_DIMENSION_TEXTURE2D = 3
+	D3D11_RESOURCE_DIMENSION_TEXTURE3D = 4
+
+class D3D11_DSV_DIMENSION(IntEnum):
+	D3D11_DSV_DIMENSION_UNKNOWN = 0
+	D3D11_DSV_DIMENSION_TEXTURE1D = 1
+	D3D11_DSV_DIMENSION_TEXTURE1DARRAY = 2
+	D3D11_DSV_DIMENSION_TEXTURE2D = 3
+	D3D11_DSV_DIMENSION_TEXTURE2DARRAY = 4
+	D3D11_DSV_DIMENSION_TEXTURE2DMS = 5
+	D3D11_DSV_DIMENSION_TEXTURE2DMSARRAY = 6
+
+class D3D11_RTV_DIMENSION(IntEnum):
+	D3D11_RTV_DIMENSION_UNKNOWN = 0
+	D3D11_RTV_DIMENSION_BUFFER = 1
+	D3D11_RTV_DIMENSION_TEXTURE1D = 2
+	D3D11_RTV_DIMENSION_TEXTURE1DARRAY = 3
+	D3D11_RTV_DIMENSION_TEXTURE2D = 4
+	D3D11_RTV_DIMENSION_TEXTURE2DARRAY = 5
+	D3D11_RTV_DIMENSION_TEXTURE2DMS = 6
+	D3D11_RTV_DIMENSION_TEXTURE2DMSARRAY = 7
+	D3D11_RTV_DIMENSION_TEXTURE3D = 8
+
+class D3D11_UAV_DIMENSION(IntEnum):
+	D3D11_UAV_DIMENSION_UNKNOWN = 0
+	D3D11_UAV_DIMENSION_BUFFER = 1
+	D3D11_UAV_DIMENSION_TEXTURE1D = 2
+	D3D11_UAV_DIMENSION_TEXTURE1DARRAY = 3
+	D3D11_UAV_DIMENSION_TEXTURE2D = 4
+	D3D11_UAV_DIMENSION_TEXTURE2DARRAY = 5
+	D3D11_UAV_DIMENSION_TEXTURE3D = 8
+
+class D3D11_USAGE(IntEnum):
+	D3D11_USAGE_DEFAULT = 0
+	D3D11_USAGE_IMMUTABLE = 1
+	D3D11_USAGE_DYNAMIC = 2
+	D3D11_USAGE_STAGING = 3
+
+class D3D11_BIND_FLAG(IntFlag):
+	D3D11_BIND_VERTEX_BUFFER     = 0x00000001
+	D3D11_BIND_INDEX_BUFFER      = 0x00000002
+	D3D11_BIND_CONSTANT_BUFFER   = 0x00000004
+	D3D11_BIND_SHADER_RESOURCE   = 0x00000008
+	D3D11_BIND_STREAM_OUTPUT     = 0x00000010
+	D3D11_BIND_RENDER_TARGET     = 0x00000020
+	D3D11_BIND_DEPTH_STENCIL     = 0x00000040
+	D3D11_BIND_UNORDERED_ACCESS  = 0x00000080
+	D3D11_BIND_DECODER           = 0x00000200
+	D3D11_BIND_VIDEO_ENCODER     = 0x00000400
+
+class D3D11_BOX (Structure):
+	_fields_ = [
+		("left", c_uint),
+		("top", c_uint),
+		("front", c_uint),
+		("right", c_uint),
+		("bottom", c_uint),
+		("back", c_uint),
+	]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

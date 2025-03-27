@@ -1,0 +1,50 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>e4cf2781-41d0-41d0-ac7c-395867f53213</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>IDL\D3D11_constants.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>PyD3D11</Name>
+    <RootNamespace>PyD3D11</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="IDL\Clear.py" />
+    <Compile Include="IDL\COM\Common.py" />
+    <Compile Include="IDL\COM\DeviceChild.py" />
+    <Compile Include="IDL\COM\GUID.py" />
+    <Compile Include="IDL\CPU.py" />
+    <Compile Include="IDL\DepthStencils.py" />
+    <Compile Include="IDL\Draw.py" />
+    <Compile Include="IDL\Input.py" />
+    <Compile Include="IDL\D3D11_constants.py" />
+    <Compile Include="IDL\Map.py" />
+    <Compile Include="IDL\Raise.py" />
+    <Compile Include="IDL\Resources.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IDL\" />
+    <Folder Include="IDL\COM\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
