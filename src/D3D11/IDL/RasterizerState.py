@@ -9,15 +9,15 @@ from Draw import D3D11_CULL_MODE, D3D11_FILL_MODE
 
 class D3D11_RASTERIZER_DESC(Structure):
 	_fields_ = [
-		("FillMode", c_int)
-		("CullMode", c_int)
-		("FrontCounterClockwise", c_bool)
-		("DepthBias", c_int)
-		("DepthBiasClamp", c_float)
-		("SlopeScaledDepthBias", c_float)
-		("DepthClipEnable", c_bool)
-		("ScissorEnable", c_bool)
-		("MultisampleEnable", c_bool)
+		("FillMode", c_int),
+		("CullMode", c_int),
+		("FrontCounterClockwise", c_bool),
+		("DepthBias", c_int),
+		("DepthBiasClamp", c_float),
+		("SlopeScaledDepthBias", c_float),
+		("DepthClipEnable", c_bool),
+		("ScissorEnable", c_bool),
+		("MultisampleEnable", c_bool),
 		("AntialiasedLineEnable", c_bool)
 	]
 

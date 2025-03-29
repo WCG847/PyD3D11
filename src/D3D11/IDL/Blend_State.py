@@ -43,13 +43,13 @@ class D3D11_COLOR_WRITE_ENABLE(IntEnum):
 
 class D3D11_RENDER_TARGET_BLEND_DESC(Structure):
 	_fields_ = [
-		("BlendEnable", c_bool)
-		("SrcBlend", c_int)
-		("DestBlend", c_int)
-		("BlendOp", c_int)
-		("SrcBlendAlpha", c_int)
-		("DestBlendAlpha", c_int)
-		("BlendOpAlpha", c_int)
+		("BlendEnable", c_bool),
+		("SrcBlend", c_int),
+		("DestBlend", c_int),
+		("BlendOp", c_int),
+		("SrcBlendAlpha", c_int),
+		("DestBlendAlpha", c_int),
+		("BlendOpAlpha", c_int),
 		("RenderTargetWriteMask", c_ubyte)
 		]
 	SrcBlend = EnumField("SrcBlend", D3D11_BLEND)

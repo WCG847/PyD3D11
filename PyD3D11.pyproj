@@ -22,6 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="src\D3D11\IDL\Blend_State.py" />
+    <Compile Include="src\D3D11\IDL\Buffer.py" />
     <Compile Include="src\D3D11\IDL\Clear.py" />
     <Compile Include="src\D3D11\IDL\COM\Common.py" />
     <Compile Include="src\D3D11\IDL\COM\DeviceChild.py" />
