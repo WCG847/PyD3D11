@@ -5,6 +5,7 @@ from D3D11_constants import D3D11_SIMULTANEOUS_RENDER_TARGET_COUNT
 from COM.DeviceChild import ID3D11DeviceChildVtbl as ID3D11DeviceChild
 from COM.Common import *
 from COM.GUID import *
+from Draw import D3D11_CULL_MODE, D3D11_FILL_MODE
 
 class D3D11_RASTERIZER_DESC(Structure):
 	_fields_ = [
@@ -19,6 +20,10 @@ class D3D11_RASTERIZER_DESC(Structure):
 		("MultisampleEnable", c_bool)
 		("AntialiasedLineEnable", c_bool)
 	]
+
+	FillMode = EnumField("FillMode", D3D11_FILL_MODE)
+	CullMode = EnumField("CullMode", D3D11_CULL_MODE)
+
 
 
 class ID3D11RasterizerStateVtbl(ID3D11DeviceChild):
