@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>e4cf2781-41d0-41d0-ac7c-395867f53213</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>src\IDL\D3D11_constants.py</StartupFile>
+    <StartupFile>src\D3D11\IDL\D3D11_constants.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,23 +21,27 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="src\IDL\Clear.py" />
-    <Compile Include="src\IDL\COM\Common.py" />
-    <Compile Include="src\IDL\COM\DeviceChild.py" />
-    <Compile Include="src\IDL\COM\GUID.py" />
-    <Compile Include="src\IDL\CPU.py" />
-    <Compile Include="src\IDL\DepthStencils.py" />
-    <Compile Include="src\IDL\Draw.py" />
-    <Compile Include="src\IDL\Input.py" />
-    <Compile Include="src\IDL\D3D11_constants.py" />
-    <Compile Include="src\IDL\Map.py" />
-    <Compile Include="src\IDL\Raise.py" />
-    <Compile Include="src\IDL\Resources.py" />
+    <Compile Include="src\D3D11\IDL\Blend_State.py" />
+    <Compile Include="src\D3D11\IDL\Clear.py" />
+    <Compile Include="src\D3D11\IDL\COM\Common.py" />
+    <Compile Include="src\D3D11\IDL\COM\DeviceChild.py" />
+    <Compile Include="src\D3D11\IDL\COM\GUID.py" />
+    <Compile Include="src\D3D11\IDL\CPU.py" />
+    <Compile Include="src\D3D11\IDL\DepthStencils.py" />
+    <Compile Include="src\D3D11\IDL\Draw.py" />
+    <Compile Include="src\D3D11\IDL\Enum_Common.py" />
+    <Compile Include="src\D3D11\IDL\Input.py" />
+    <Compile Include="src\D3D11\IDL\D3D11_constants.py" />
+    <Compile Include="src\D3D11\IDL\Map.py" />
+    <Compile Include="src\D3D11\IDL\Raise.py" />
+    <Compile Include="src\D3D11\IDL\RasterizerState.py" />
+    <Compile Include="src\D3D11\IDL\Resources.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="src\IDL\" />
-    <Folder Include="src\IDL\COM\" />
+    <Folder Include="src\D3D11\IDL\" />
+    <Folder Include="src\D3D11\IDL\COM\" />
     <Folder Include="src\" />
+    <Folder Include="src\D3D11\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
