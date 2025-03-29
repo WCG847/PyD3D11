@@ -37,12 +37,16 @@
     <Compile Include="src\D3D11\IDL\Raise.py" />
     <Compile Include="src\D3D11\IDL\RasterizerState.py" />
     <Compile Include="src\D3D11\IDL\Resources.py" />
+    <Compile Include="src\D3D11\IDL\Texture1D.py" />
+    <Compile Include="src\DXGI\IDL\Format.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\D3D11\IDL\" />
     <Folder Include="src\D3D11\IDL\COM\" />
     <Folder Include="src\" />
     <Folder Include="src\D3D11\" />
+    <Folder Include="src\DXGI\" />
+    <Folder Include="src\DXGI\IDL\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.md" />
